@@ -54,16 +54,12 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ---
 
 # Basin audit details
-- Total Prize Pool: $37500 in USDC
-  - HM awards: $23520 in USDC
-  - (remove this line if there is no Analysis pool) Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: $980 in USDC
-  - (remove this line if there is no Bot race) Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
- 
-  - Judge awards: $4500 in USDC
-  - Validator awards: XXX XXX USDC (Notion: Triage fee - final)
+- Total Prize Pool: $37,500 in USDC
+  - HM awards: $23,520 in USDC
+  - QA awards: $980 in USDC 
+  - Judge awards: $4,500 in USDC
   - Scout awards: $500 in USDC
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
+  - Mitigation Review: $7,500 in USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-07-basin/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
@@ -73,7 +69,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ## Automated Findings / Publicly Known Issues
 
 The 4naly3er report can be found [here](https://github.com/code-423n4/2024-07-basin/blob/main/4naly3er-report.md).
-
 
 
 _Note for C4 wardens: Anything included in this `Automated Findings / Publicly Known Issues` section is considered a publicly known issue and is ineligible for awards._

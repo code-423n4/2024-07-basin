@@ -227,7 +227,7 @@ All findings in the following audit reports:
 | Upgradeability (e.g. Uniswap gets upgraded)               |   No  |
 
 
-### EIP compliance checklist
+### EIP compliance
 `src/WellUpgradeable.sol`: should comply with EIP-1822
 
 

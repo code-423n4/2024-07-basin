@@ -260,7 +260,7 @@ git submodule update --init --recursive
 foundryup
 forge install
 ```
-Setup python environment and perform the tests (Make sure your `MAINNET_RPC_URL` is set in `.env` file):
+Setup Python environment and perform the tests (Make sure your `MAINNET_RPC_URL` is set in `.env` file):
 ```bash
 python3 -m venv env 
 source env/bin/activate 
@@ -269,7 +269,7 @@ forge test --ffi
 ```
 To run code coverage:
 ```bash
-forge  coverage --ffi
+forge coverage --ffi
 ```
 
 <pre>| File                                                            | % Lines            | % Statements       | % Branches         | % Funcs          |

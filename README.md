@@ -402,4 +402,4 @@ forge test --ffi --gas-report
 
 
 ## Miscellaneous
-Employees of Basin and employees' family members are ineligible to participate in this audit.
+Employees of Beanstalk Farms contributors and employees' family members are ineligible to participate in this audit.

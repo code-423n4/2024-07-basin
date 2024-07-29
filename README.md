@@ -33,14 +33,14 @@ All findings in the following audit reports:
 # Basin
 ![basin(green)-512x512 (1)](https://github.com/code-423n4/2024-07-basin/blob/main/basin(green)-512x512%20(1).png?raw=true) ![512x512-MF](https://github.com/code-423n4/2024-07-basin/blob/main/512x512-MF.png?raw=true)
 
-Code Version: `1.0.0` <br>
+Code Version: `1.0.0` 
 Whitepaper Version: `1.0.0`
 
 ### Multi Flow
 
 The Multi Flow Pump implementation is also included in this repository at [MultiFlowPump.sol](/src/pumps/MultiFlowPump.sol).
 
-Code Version: `1.0.0` <br>
+Code Version: `1.0.0` 
 Whitepaper Version: `1.0.0`
 
 ## About
@@ -120,9 +120,9 @@ An example factory implementation is provided in [{Aquifer}](/src/Aquifer.sol) w
 
 | File   | Logic Contracts | Interfaces | nSLOC | Purpose | Libraries used |
 | ------ | --------------- | ---------- | ----- | -----   | ------------ |
-| [/src/functions/Stable2.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/functions/Stable2.sol) | 1| **** | 194 | |src/interfaces/IBeanstalkWellFunction.sol<br>src/interfaces/ILookupTable.sol<br>src/functions/ProportionalLPToken2.sol<br>forge-std/interfaces/IERC20.sol|
-| [/src/functions/StableLUT/Stable2LUT1.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/functions/StableLUT/Stable2LUT1.sol) | 1| **** | 2150 | |src/interfaces/ILookupTable.sol|
-| [/src/WellUpgradeable.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/WellUpgradeable.sol) | 1| **** | 70 | |src/Well.sol<br>ozu/proxy/utils/UUPSUpgradeable.sol<br>ozu/access/OwnableUpgradeable.sol<br>oz/token/ERC20/utils/SafeERC20.sol<br>src/interfaces/IAquifer.sol|
+| [/src/functions/Stable2.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/functions/Stable2.sol) | 1| **** | 194 | | src/interfaces/IBeanstalkWellFunction.sol, src/interfaces/ILookupTable.sol, src/functions/ProportionalLPToken2.sol, forge-std/interfaces/IERC20.sol |
+| [/src/functions/StableLUT/Stable2LUT1.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/functions/StableLUT/Stable2LUT1.sol) | 1| **** | 2150 | | src/interfaces/ILookupTable.sol |
+| [/src/WellUpgradeable.sol](https://github.com/code-423n4/2024-07-basin/blob/main/src/WellUpgradeable.sol) | 1| **** | 70 | | src/Well.sol, ozu/proxy/utils/UUPSUpgradeable.sol, ozu/access/OwnableUpgradeable.sol, oz/token/ERC20/utils/SafeERC20.sol, src/interfaces/IAquifer.sol |
 | **Totals** | **3** | **** | **2414** | | |
 
 ### Files out of scope
@@ -341,56 +341,55 @@ To run code coverage:
 forge coverage --ffi
 ```
 
-<pre>| File                                                            | % Lines            | % Statements       | % Branches         | % Funcs          |
+| File                                                            | % Lines            | % Statements       | % Branches         | % Funcs          |
 |-----------------------------------------------------------------|--------------------|--------------------|--------------------|------------------|
-| mocks/functions/MockEmptyFunction.sol                           |<font color="#E9AD0C"> 66.67% (2/3)       </font>|<font color="#E9AD0C"> 66.67% (2/3)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 80.00% (4/5)     </font>|
-| mocks/functions/MockFunctionBad.sol                             |<font color="#F66151"> 33.33% (1/3)       </font>|<font color="#F66151"> 25.00% (1/4)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 60.00% (3/5)     </font>|
-| mocks/pumps/MockFailPump.sol                                    |<font color="#33DA7A"> 100.00% (1/1)      </font>|<font color="#33DA7A"> 100.00% (1/1)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (1/1)    </font>|
-| mocks/pumps/MockPump.sol                                        |<font color="#E9AD0C"> 50.00% (1/2)       </font>|<font color="#E9AD0C"> 50.00% (1/2)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 50.00% (1/2)     </font>|
-| mocks/tokens/MockToken.sol                                      |<font color="#33DA7A"> 83.33% (5/6)       </font>|<font color="#33DA7A"> 83.33% (5/6)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 80.00% (4/5)     </font>|
-| mocks/tokens/MockTokenFeeOnTransfer.sol                         |<font color="#33DA7A"> 81.25% (13/16)     </font>|<font color="#33DA7A"> 86.36% (19/22)     </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 66.67% (6/9)     </font>|
-| mocks/tokens/ReentrantMockToken.sol                             |<font color="#33DA7A"> 100.00% (7/7)      </font>|<font color="#33DA7A"> 88.89% (8/9)       </font>|<font color="#33DA7A"> 100.00% (6/6)      </font>|<font color="#33DA7A"> 100.00% (3/3)    </font>|
-| mocks/wells/MockInitFailWell.sol                                |<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (2/2)    </font>|
-| mocks/wells/MockReserveWell.sol                                 |<font color="#33DA7A"> 100.00% (7/7)      </font>|<font color="#33DA7A"> 100.00% (7/7)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (6/6)    </font>|
-| mocks/wells/MockStaticWell.sol                                  |<font color="#33DA7A"> 100.00% (31/31)    </font>|<font color="#33DA7A"> 100.00% (40/40)    </font>|<font color="#33DA7A"> 100.00% (4/4)      </font>|<font color="#33DA7A"> 100.00% (10/10)  </font>|
-| mocks/wells/MockWellUpgradeable.sol                             |<font color="#33DA7A"> 100.00% (1/1)      </font>|<font color="#33DA7A"> 100.00% (1/1)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (1/1)    </font>|
-| script/deploy/Aquifer.s.sol                                     |<font color="#F66151"> 0.00% (0/3)        </font>|<font color="#F66151"> 0.00% (0/4)        </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/deploy/AquiferWell.s.sol                                 |<font color="#F66151"> 0.00% (0/17)       </font>|<font color="#F66151"> 0.00% (0/23)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/deploy/MockPump.s.sol                                    |<font color="#F66151"> 0.00% (0/5)        </font>|<font color="#F66151"> 0.00% (0/7)        </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/deploy/Well.s.sol                                        |<font color="#F66151"> 0.00% (0/17)       </font>|<font color="#F66151"> 0.00% (0/23)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/deploy/helpers/Logger.sol                                |<font color="#F66151"> 0.00% (0/8)        </font>|<font color="#F66151"> 0.00% (0/8)        </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/helpers/WellDeployer.sol                                 |<font color="#33DA7A"> 100.00% (6/6)      </font>|<font color="#33DA7A"> 100.00% (6/6)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (2/2)    </font>|
-| script/simulations/stableswap/StableswapCalcRatiosLiqSim.s.sol  |<font color="#F66151"> 0.00% (0/43)       </font>|<font color="#F66151"> 0.00% (0/55)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| script/simulations/stableswap/StableswapCalcRatiosSwapSim.s.sol |<font color="#F66151"> 0.00% (0/57)       </font>|<font color="#F66151"> 0.00% (0/75)       </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| src/Aquifer.sol                                                 |<font color="#33DA7A"> 100.00% (27/27)    </font>|<font color="#33DA7A"> 100.00% (30/30)    </font>|<font color="#33DA7A"> 100.00% (20/20)    </font>|<font color="#E9AD0C"> 66.67% (2/3)     </font>|
-| src/Well.sol                                                    |<font color="#33DA7A"> 98.84% (255/258)   </font>|<font color="#33DA7A"> 98.65% (365/370)   </font>|<font color="#33DA7A"> 100.00% (52/52)    </font>|<font color="#33DA7A"> 95.92% (47/49)   </font>|
-| src/WellUpgradeable.sol                                         |<font color="#33DA7A"> 83.33% (25/30)     </font>|<font color="#33DA7A"> 86.05% (37/43)     </font>|<font color="#33DA7A"> 85.71% (12/14)     </font>|<font color="#33DA7A"> 80.00% (8/10)    </font>|
-| src/functions/ConstantProduct.sol                               |<font color="#33DA7A"> 77.27% (17/22)     </font>|<font color="#E9AD0C"> 70.59% (24/34)     </font>|<font color="#E9AD0C"> 66.67% (4/6)       </font>|<font color="#33DA7A"> 75.00% (6/8)     </font>|
-| src/functions/ConstantProduct2.sol                              |<font color="#33DA7A"> 100.00% (12/12)    </font>|<font color="#33DA7A"> 100.00% (16/16)    </font>|<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#33DA7A"> 100.00% (7/7)    </font>|
-| src/functions/ProportionalLPToken.sol                           |<font color="#F66151"> 0.00% (0/3)        </font>|<font color="#F66151"> 0.00% (0/5)        </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#F66151"> 0.00% (0/1)      </font>|
-| src/functions/ProportionalLPToken2.sol                          |<font color="#33DA7A"> 100.00% (3/3)      </font>|<font color="#33DA7A"> 100.00% (3/3)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 100.00% (1/1)    </font>|
-| src/functions/Stable2.sol                                       |<font color="#33DA7A"> 92.11% (105/114)   </font>|<font color="#33DA7A"> 92.70% (165/178)   </font>|<font color="#33DA7A"> 84.78% (39/46)     </font>|<font color="#33DA7A"> 85.71% (12/14)   </font>|
-| src/functions/StableLUT/Stable2LUT1.sol                         |<font color="#33DA7A"> 94.84% (386/407)   </font>|<font color="#33DA7A"> 94.84% (386/407)   </font>|<font color="#33DA7A"> 94.80% (383/404)   </font>|<font color="#33DA7A"> 100.00% (3/3)    </font>|
-| src/libraries/ABDKMathQuad.sol                                  |<font color="#E9AD0C"> 73.26% (778/1062)  </font>|<font color="#E9AD0C"> 73.37% (1149/1566) </font>|<font color="#33DA7A"> 77.16% (696/902)   </font>|<font color="#F66151"> 46.88% (15/32)   </font>|
-| src/libraries/LibBytes.sol                                      |<font color="#33DA7A"> 100.00% (26/26)    </font>|<font color="#33DA7A"> 100.00% (33/33)    </font>|<font color="#33DA7A"> 100.00% (18/18)    </font>|<font color="#33DA7A"> 100.00% (2/2)    </font>|
-| src/libraries/LibBytes16.sol                                    |<font color="#33DA7A"> 100.00% (21/21)    </font>|<font color="#33DA7A"> 100.00% (28/28)    </font>|<font color="#33DA7A"> 100.00% (8/8)      </font>|<font color="#33DA7A"> 100.00% (2/2)    </font>|
-| src/libraries/LibClone.sol                                      |<font color="#33DA7A"> 88.66% (86/97)     </font>|<font color="#33DA7A"> 88.89% (88/99)     </font>|<font color="#33DA7A"> 80.00% (4/5)       </font>|<font color="#33DA7A"> 90.00% (9/10)    </font>|
-| src/libraries/LibContractInfo.sol                               |<font color="#E9AD0C"> 66.67% (8/12)      </font>|<font color="#E9AD0C"> 61.54% (8/13)      </font>|<font color="#E9AD0C"> 50.00% (2/4)       </font>|<font color="#E9AD0C"> 66.67% (2/3)     </font>|
-| src/libraries/LibLastReserveBytes.sol                           |<font color="#33DA7A"> 97.56% (40/41)     </font>|<font color="#33DA7A"> 98.18% (54/55)     </font>|<font color="#33DA7A"> 100.00% (14/14)    </font>|<font color="#33DA7A"> 75.00% (3/4)     </font>|
-| src/libraries/LibMath.sol                                       |<font color="#33DA7A"> 98.53% (67/68)     </font>|<font color="#33DA7A"> 96.59% (85/88)     </font>|<font color="#33DA7A"> 100.00% (24/24)    </font>|<font color="#33DA7A"> 100.00% (4/4)    </font>|
-| src/libraries/LibWellConstructor.sol                            |<font color="#33DA7A"> 92.86% (13/14)     </font>|<font color="#33DA7A"> 94.74% (18/19)     </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 75.00% (3/4)     </font>|
-| src/libraries/LibWellUpgradeableConstructor.sol                 |<font color="#33DA7A"> 92.86% (13/14)     </font>|<font color="#33DA7A"> 94.74% (18/19)     </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#33DA7A"> 75.00% (3/4)     </font>|
-| src/pumps/MultiFlowPump.sol                                     |<font color="#33DA7A"> 96.45% (190/197)   </font>|<font color="#33DA7A"> 96.39% (267/277)   </font>|<font color="#33DA7A"> 96.15% (50/52)     </font>|<font color="#33DA7A"> 100.00% (21/21)  </font>|
-| src/utils/Clone.sol                                             |<font color="#F66151"> 41.67% (5/12)      </font>|<font color="#F66151"> 38.89% (7/18)      </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 50.00% (3/6)     </font>|
-| src/utils/ClonePlus.sol                                         |<font color="#33DA7A"> 100.00% (7/7)      </font>|<font color="#33DA7A"> 100.00% (12/12)    </font>|<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#33DA7A"> 100.00% (2/2)    </font>|
-| test/LiquidityHelper.sol                                        |<font color="#E9AD0C"> 63.16% (24/38)     </font>|<font color="#E9AD0C"> 67.80% (40/59)     </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 57.14% (4/7)     </font>|
-| test/SwapHelper.sol                                             |<font color="#33DA7A"> 92.31% (24/26)     </font>|<font color="#33DA7A"> 94.29% (33/35)     </font>|<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#E9AD0C"> 66.67% (2/3)     </font>|
-| test/TestHelper.sol                                             |<font color="#33DA7A"> 89.29% (150/168)   </font>|<font color="#33DA7A"> 90.31% (205/227)   </font>|<font color="#33DA7A"> 88.89% (16/18)     </font>|<font color="#33DA7A"> 86.96% (40/46)   </font>|
-| test/helpers/Users.sol                                          |<font color="#33DA7A"> 81.82% (9/11)      </font>|<font color="#33DA7A"> 81.25% (13/16)     </font>|<font color="#8B8A88"> 100.00% (0/0)      </font>|<font color="#E9AD0C"> 66.67% (2/3)     </font>|
-| test/integration/IntegrationTestHelper.sol                      |<font color="#33DA7A"> 93.55% (29/31)     </font>|<font color="#33DA7A"> 92.68% (38/41)     </font>|<font color="#33DA7A"> 100.00% (2/2)      </font>|<font color="#33DA7A"> 100.00% (6/6)    </font>|
-| test/invariant/Handler.t.sol                                    |<font color="#33DA7A"> 89.96% (233/259)   </font>|<font color="#33DA7A"> 90.29% (316/350)   </font>|<font color="#33DA7A"> 100.00% (36/36)    </font>|<font color="#33DA7A"> 90.91% (20/22)   </font>|
-| Total                                                           |<font color="#33DA7A"> 81.80% (2630/3215) </font>|<font color="#33DA7A"> 81.38% (3531/4339) </font>|<font color="#33DA7A"> 85.07% (1396/1641) </font>|<font color="#33DA7A"> 81.19% (272/335) </font>|
-</pre>
+| mocks/functions/MockEmptyFunction.sol                           | 66.67% (2/3)       | 66.67% (2/3)       | 100.00% (0/0)      | 80.00% (4/5)     |
+| mocks/functions/MockFunctionBad.sol                             | 33.33% (1/3)       | 25.00% (1/4)       | 100.00% (0/0)      | 60.00% (3/5)     |
+| mocks/pumps/MockFailPump.sol                                    | 100.00% (1/1)      | 100.00% (1/1)      | 100.00% (0/0)      | 100.00% (1/1)    |
+| mocks/pumps/MockPump.sol                                        | 50.00% (1/2)       | 50.00% (1/2)       | 100.00% (0/0)      | 50.00% (1/2)     |
+| mocks/tokens/MockToken.sol                                      | 83.33% (5/6)       | 83.33% (5/6)       | 100.00% (0/0)      | 80.00% (4/5)     |
+| mocks/tokens/MockTokenFeeOnTransfer.sol                         | 81.25% (13/16)     | 86.36% (19/22)     | 100.00% (0/0)      | 66.67% (6/9)     |
+| mocks/tokens/ReentrantMockToken.sol                             | 100.00% (7/7)      | 88.89% (8/9)       | 100.00% (6/6)      | 100.00% (3/3)    |
+| mocks/wells/MockInitFailWell.sol                                | 100.00% (2/2)      | 100.00% (2/2)      | 100.00% (0/0)      | 100.00% (2/2)    |
+| mocks/wells/MockReserveWell.sol                                 | 100.00% (7/7)      | 100.00% (7/7)      | 100.00% (0/0)      | 100.00% (6/6)    |
+| mocks/wells/MockStaticWell.sol                                  | 100.00% (31/31)    | 100.00% (40/40)    | 100.00% (4/4)      | 100.00% (10/10)  |
+| mocks/wells/MockWellUpgradeable.sol                             | 100.00% (1/1)      | 100.00% (1/1)      | 100.00% (0/0)      | 100.00% (1/1)    |
+| script/deploy/Aquifer.s.sol                                     | 0.00% (0/3)        | 0.00% (0/4)        | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/deploy/AquiferWell.s.sol                                 | 0.00% (0/17)       | 0.00% (0/23)       | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/deploy/MockPump.s.sol                                    | 0.00% (0/5)        | 0.00% (0/7)        | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/deploy/Well.s.sol                                        | 0.00% (0/17)       | 0.00% (0/23)       | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/deploy/helpers/Logger.sol                                | 0.00% (0/8)        | 0.00% (0/8)        | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/helpers/WellDeployer.sol                                 | 100.00% (6/6)      | 100.00% (6/6)      | 100.00% (0/0)      | 100.00% (2/2)    |
+| script/simulations/stableswap/StableswapCalcRatiosLiqSim.s.sol  | 0.00% (0/43)       | 0.00% (0/55)       | 100.00% (0/0)      | 0.00% (0/1)      |
+| script/simulations/stableswap/StableswapCalcRatiosSwapSim.s.sol | 0.00% (0/57)       | 0.00% (0/75)       | 100.00% (0/0)      | 0.00% (0/1)      |
+| src/Aquifer.sol                                                 | 100.00% (27/27)    | 100.00% (30/30)    | 100.00% (20/20)    | 66.67% (2/3)     |
+| src/Well.sol                                                    | 98.84% (255/258)   | 98.65% (365/370)   | 100.00% (52/52)    | 95.92% (47/49)   |
+| src/WellUpgradeable.sol                                         | 83.33% (25/30)     | 86.05% (37/43)     | 85.71% (12/14)     | 80.00% (8/10)    |
+| src/functions/ConstantProduct.sol                               | 77.27% (17/22)     | 70.59% (24/34)     | 66.67% (4/6)       | 75.00% (6/8)     |
+| src/functions/ConstantProduct2.sol                              | 100.00% (12/12)    | 100.00% (16/16)    | 100.00% (2/2)      | 100.00% (7/7)    |
+| src/functions/ProportionalLPToken.sol                           | 0.00% (0/3)        | 0.00% (0/5)        | 100.00% (0/0)      | 0.00% (0/1)      |
+| src/functions/ProportionalLPToken2.sol                          | 100.00% (3/3)      | 100.00% (3/3)      | 100.00% (0/0)      | 100.00% (1/1)    |
+| src/functions/Stable2.sol                                       | 92.11% (105/114)   | 92.70% (165/178)   | 84.78% (39/46)     | 85.71% (12/14)   |
+| src/functions/StableLUT/Stable2LUT1.sol                         | 94.84% (386/407)   | 94.84% (386/407)   | 94.80% (383/404)   | 100.00% (3/3)    |
+| src/libraries/ABDKMathQuad.sol                                  | 73.26% (778/1062)  | 73.37% (1149/1566) | 77.16% (696/902)   | 46.88% (15/32)   |
+| src/libraries/LibBytes.sol                                      | 100.00% (26/26)    | 100.00% (33/33)    | 100.00% (18/18)    | 100.00% (2/2)    |
+| src/libraries/LibBytes16.sol                                    | 100.00% (21/21)    | 100.00% (28/28)    | 100.00% (8/8)      | 100.00% (2/2)    |
+| src/libraries/LibClone.sol                                      | 88.66% (86/97)     | 88.89% (88/99)     | 80.00% (4/5)       | 90.00% (9/10)    |
+| src/libraries/LibContractInfo.sol                               | 66.67% (8/12)      | 61.54% (8/13)      | 50.00% (2/4)       | 66.67% (2/3)     |
+| src/libraries/LibLastReserveBytes.sol                           | 97.56% (40/41)     | 98.18% (54/55)     | 100.00% (14/14)    | 75.00% (3/4)     |
+| src/libraries/LibMath.sol                                       | 98.53% (67/68)     | 96.59% (85/88)     | 100.00% (24/24)    | 100.00% (4/4)    |
+| src/libraries/LibWellConstructor.sol                            | 92.86% (13/14)     | 94.74% (18/19)     | 100.00% (0/0)      | 75.00% (3/4)     |
+| src/libraries/LibWellUpgradeableConstructor.sol                 | 92.86% (13/14)     | 94.74% (18/19)     | 100.00% (0/0)      | 75.00% (3/4)     |
+| src/pumps/MultiFlowPump.sol                                     | 96.45% (190/197)   | 96.39% (267/277)   | 96.15% (50/52)     | 100.00% (21/21)  |
+| src/utils/Clone.sol                                             | 41.67% (5/12)      | 38.89% (7/18)      | 100.00% (0/0)      | 50.00% (3/6)     |
+| src/utils/ClonePlus.sol                                         | 100.00% (7/7)      | 100.00% (12/12)    | 100.00% (2/2)      | 100.00% (2/2)    |
+| test/LiquidityHelper.sol                                        | 63.16% (24/38)     | 67.80% (40/59)     | 100.00% (0/0)      | 57.14% (4/7)     |
+| test/SwapHelper.sol                                             | 92.31% (24/26)     | 94.29% (33/35)     | 100.00% (2/2)      | 66.67% (2/3)     |
+| test/TestHelper.sol                                             | 89.29% (150/168)   | 90.31% (205/227)   | 88.89% (16/18)     | 86.96% (40/46)   |
+| test/helpers/Users.sol                                          | 81.82% (9/11)      | 81.25% (13/16)     | 100.00% (0/0)      | 66.67% (2/3)     |
+| test/integration/IntegrationTestHelper.sol                      | 93.55% (29/31)     | 92.68% (38/41)     | 100.00% (2/2)      | 100.00% (6/6)    |
+| test/invariant/Handler.t.sol                                    | 89.96% (233/259)   | 90.29% (316/350)   | 100.00% (36/36)    | 90.91% (20/22)   |
+| Total                                                           | 81.80% (2630/3215) | 81.38% (3531/4339) | 85.07% (1396/1641) | 81.19% (272/335) |
 
 To run gas benchmarks:
 ```bash

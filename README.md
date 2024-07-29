@@ -1,11 +1,11 @@
 
 # Basin audit details
-- Total Prize Pool: $37,500 in USDC
+- Total Prize Pool: $37,750 in USDC
   - HM awards: $23,520 in USDC
   - QA awards: $980 in USDC 
   - Judge awards: $4,500 in USDC
   - Validator awards: $2,000 in USDC
-  - Scout awards: $500 in USDC
+  - Scout awards: $750 in USDC
   - Mitigation Review: $6,000 in USDC (*Opportunity goes to top 3 backstage wardens based on placement in this audit who RSVP.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2024-07-basin/submit)

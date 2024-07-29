@@ -29,14 +29,12 @@ All findings in the following audit reports:
 
 
 # Overview
-<img src="https://github.com/BeanstalkFarms/Beanstalk-Brand-Assets/blob/main/basin/basin(green)-512x512.png" alt="Basin logo" align="right" width="120" />
 
 # Basin
+![basin(green)-512x512 (1)](https://github.com/code-423n4/2024-07-basin/blob/main/basin(green)-512x512%20(1).png?raw=true) ![512x512-MF](https://github.com/code-423n4/2024-07-basin/blob/main/512x512-MF.png?raw=true)
 
 Code Version: `1.0.0` <br>
 Whitepaper Version: `1.0.0`
-
-<img src="https://github.com/BeanstalkFarms/Beanstalk-Brand-Assets/blob/main/multi-flow/512x512-MF.png" alt="Multi Flow logo" align="right" width="60" />
 
 ### Multi Flow
 
